@@ -1,5 +1,26 @@
 package main
 
+import "fmt"
+
+//Creating a Profit Calculator in Go as a project to learn its basics
 func main() {
-	print("Hello, World!")
+	println("Welcome to the Profit Calculator!")
+	var revenue float64
+	var cost float64
+	var taxRate float64
+
+	fmt.Print("Enter the revenue: ")
+	fmt.Scan(&revenue)
+
+	fmt.Print("Enter the cost: ")
+	fmt.Scan(&cost)
+
+	fmt.Print("Enter the tax rate: ")
+	fmt.Scan(&taxRate)
+
+	EBT := revenue - cost
+	EAT := EBT - (EBT * (taxRate/100))
+
+	println("Earnings Before Tax: ", EBT)
+	println("Earnings After Tax: ", EAT)
 }
