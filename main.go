@@ -20,7 +20,7 @@ func main() {
 	fmt.Scan(&taxRate)
 
 	EBT := revenue - cost
-	EAT := EBT - (EBT * (taxRate / 100))
+	EAT := EBT * (1 - (taxRate / 100))
 	ratio := EBT / EAT
 
 	fmt.Println("Earnings Before Tax: ", EBT)
