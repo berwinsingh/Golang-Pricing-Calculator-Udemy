@@ -21,6 +21,6 @@ func main() {
 	EBT := revenue - cost
 	EAT := EBT - (EBT * (taxRate/100))
 
-	println("Earnings Before Tax: ", EBT)
-	println("Earnings After Tax: ", EAT)
+	fmt.Println("Earnings Before Tax: ", EBT)
+	fmt.Println("Earnings After Tax: ", EAT)
 }
